@@ -10,5 +10,12 @@ public class App {
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
+
+        Cat bean1= (Cat) applicationContext.getBean("cat");
+        Cat bean2= (Cat) applicationContext.getBean("cat");
+        bean1.say();
+        bean2.say();
+
+        System.out.println("Ekoonun ssylkasy birbi: "+(bean1==bean2));
     }
 }
